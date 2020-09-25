@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+       <title>Купоны</title>
+	   <meta charset="utf-8">
+	   <script type="text/javascript" src="JS/coupons.js"></script>
+    </head>
+    <body>
+	<table border="1" width="100%" height="100%">
+  	    <tr>
+    		<td>
+				<font size="6"><b>"Аптека от склада"</b></font>				
+			</td>
+			<td colspan="2">
+				<p align="right"><a>Выход</a></p>
+			</td>
+  	    </tr>
+	    <tr>
+    		<td colspan="2">
+				<p>Справочная информация</p>
+			</td>
+  	    </tr>
+		<tr>
+			<td width="25%" valign="top">
+				<p><a href="goods.html">Справочник товаров</a></p>
+				<p><a href="stickers.html">Стикеры</a></p>
+				<p><a href="goodsnoimage.html">Товары без фото</a></p>
+				<p><a href="goodsnodesc.html">Товары без описаний</a></p>
+				<p><a href="prices.html">Управление ценами</a></p>
+				<p><a href="coupons.html">Купоны</a></p>
+			</td>
+			<td valign="top">
+				<font size="6"><b>Купоны</b></font>
+				<hr>
+				<form>
+					<p>
+						<input type="button" id="addCouponB" value="Добавить">
+						<input type="button" id="loadB" value="Загрузить">
+					</p>
+					<p>
+						<input type="text" id="id" title="ИД">
+						<input type="text" id="code" title="Код">
+						<input type="text" id="groupNumber" title="Номер группы товаров">
+					</p>
+					<p>
+						<input type="button" id="filterB" value="Фильтр">
+						<input type="button" id="resetB" value="Сброс">
+					</p>
+				</form>
+				<br>
+				<table border="1" id="couponsTable">
+					<tr>
+						<th align="center">ИД</th>
+						<th align="center">Код</th>
+						<th align="center">Дата начала</th>
+						<th align="center">Дата окончания</th>
+						<th align="center">Процент скидки</th>
+						<th align="center">Сумма заказа</th>
+						<th align="center">Кол-во на одного покупателя</th>
+						<th align="center">Максимальная сумма скидки</th>
+						<th align="center">Только на первый заказ</th>
+						<th align="center">Номер группы товаров</th>
+						<th align="center">На все товары</th>
+						<th align="center" colspan="2"></th>
+					</tr>
+				</table>
+			</td>
+			<dialog value="Добавление" id="addEditDialog">
+				<form method="dialog" id="addEditForm">
+					Код
+					<input type="text" id="codeTB"><br>
+					Дата начала
+					<input type="date" id="dateStartTB"><br>
+					Дата окончания
+					<input type="date" id="dateEndTB"><br>
+					Процент скидки
+					<input type="text" id="discountPercentTB"><br>
+					Исходная сумма заказа
+					<input type="text" id="orderSumTB"><br>
+					Количество на одного покупателя
+					<input type="text" id="countTB"><br>
+					Максимальная сумма скидки
+					<input type="text" id="maxDiscountSumTB"><br>
+					Только на первый заказ
+					<input type="checkbox" id="isFirstTB"><br>
+					Номер группы товаров
+					<input type="text" id="grounNumberTB"><br>
+					На все товары
+					<input type="checkbox" id="isAllTB"><br>
+					<input type="button" id="saveB" value="Сохранить">
+					<input type="hidden" id="typeTB" value="add">
+				</form>
+			</dialog>
+		</tr>
+	</table>
+    </body>
+</html>

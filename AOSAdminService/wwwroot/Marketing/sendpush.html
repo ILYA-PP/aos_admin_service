@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Отправить PUSH-сообщение</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="JS/sendpush.js"></script>
+</head>
+    <body>
+	<table border="1" width="100%" height="100%" cellpadding="4" cellspacing="5">
+  	    <tr>
+    		<td colspan="2">
+				<font size="5"><b>Автоматизированное рабочее место маркетолога "Аптека от склада"</b></font>				
+			</td>
+			<td colspan="2" width="5%" align="right">
+				<a href="">Выход</a>				
+			</td>
+  	    </tr>
+	    <tr>
+			<td width="25%" valign="top">
+				<p><a href="discountcontrol.html">Управление акциями</a></p>
+				<p><a href="offers.html">Персональные предложения</a></p>
+				<p><a href="goodrelated.html">Сопутствующие товары</a></p>
+				<p><a href="feedback.html">Обратная связь</a></p>
+				<p><a href="sendpush.html">Отправить PUSH-уведомление</a></p>
+			</td>
+	        <td valign="top" colspan="2">
+				<font size="6"><b>Отправить PUSH-сообщение</b></font>
+				<hr>
+				<br>
+				<form>
+					<p><b>Кому</b></p> 
+					<textarea rows="8" name="phone">
+					Одна строка - один телефон</textarea><br/>
+					<p><input type="checkbox" id="sendall"/><label for="sendall">отправить всем</label></p>
+					<p><b>Заголовок</b></p> 
+					<input type="text" name="title">
+					<p><b>Текст</b></p> 
+					<textarea rows="8" name="text"></textarea><br/>
+					<p><b>click_action</b></p> 
+					<select name="actions">
+						<option  selected="selected" value="all">-</option>
+						<option value="main">Главная</option>
+						<option value="order">Заказ</option>
+						<option value="stock">Акция</option>
+						<option value="openbanner">Открыть прямоугольный баннер</option>
+						<option value="openselection">Открыть подборку</option>
+						<option value="promocode">Промо-код</option>
+					</select>
+					<p><b>click_data</b></p> 
+					<p><input type="text" name="data"></p>
+					<button>Отправить сообщение</button>
+				</form>
+			</td>
+  	    </tr>
+	</table>
+    </body>
+</html>

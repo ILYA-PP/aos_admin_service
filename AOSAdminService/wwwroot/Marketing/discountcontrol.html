@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+       <title>Управление акциями</title>
+	   <meta charset="utf-8">
+	   <script type="text/javascript" src="JS/discountcontrol.js"></script>
+    </head>
+    <body>
+	<table border="1" width="100%" height="100%" cellpadding="4" cellspacing="5">
+  	    <tr>
+    		<td colspan="2">
+				<font size="5"><b>Автоматизированное рабочее место маркетолога "Аптека от склада"</b></font>				
+			</td>
+			<td colspan="2" width="5%" align="right">
+				<a href="">Выход</a>				
+			</td>
+  	    </tr>
+	    <tr>
+    		<td width="25%" valign="top">
+				<p><a href="discountcontrol.html">Управление акциями</a></p>
+				<p><a href="offers.html">Персональные предложения</a></p>
+				<p><a href="goodrelated.html">Сопутствующие товары</a></p>
+				<p><a href="feedback.html">Обратная связь</a></p>
+				<p><a href="sendpush.html">Отправить PUSH-уведомление</a></p>
+			</td>
+	        <td valign="top" colspan="2">
+				<font size="6"><b>Управление акциями</b></font>
+				<hr>
+				<form>
+					<button>Добавить запись</button>
+					<button>Скопировать из маркетинговой группы</button>
+				</form>
+				<form>
+					<p><input type="date" name="createDateTime" title="Дата и время создания">
+					<input type="text" name="name" title="Наименование">
+					<input type="date" name="beginDate" title="Дата начала">
+					<input type="date" name="EndDate" title="Дата окончания">
+					<input type="" name="city" title="Город">
+					<select name="form_select">
+						<option  selected="selected" value="all">Все</option>
+						<option value="draft">Черновик</option>
+						<option value="active">Активная</option>
+						<option value="archive">Архивная</option>
+					</select></p>
+					<p><button>Применить фильтр</button>
+					   <button>Очистить</button></p>
+				</form>
+				<br>
+				<table border="1" id="discountTable">
+					<tr>
+						<th align="center">ИД</th>
+						<th align="center">Тип баннера</th>
+						<th align="center">Дата и время создания</th>
+						<th align="center">Наименование</th>
+						<th align="center">Сроки публикации</th>
+						<th align="center">Город</th>
+						<th align="center">Статус</th>
+						<th align="center"></th>
+						<th align="center"></th>
+					</tr>
+					<tr>
+						<td align="center">451</td>
+						<td align="center">Подборка</td>
+						<td align="center">15.09.2020 13:42</td>
+						<td align="center">От изжоги</td>
+						<td align="center">15.09.2020-16.09.2020</td>
+						<td align="center">Пермь</td>
+						<td align="center">Активная</td>
+						<td align="center">edit</td>
+						<td align="center">del</td>
+					</tr>
+				</table>
+			</td>
+  	    </tr>
+	</table>
+    </body>
+</html>

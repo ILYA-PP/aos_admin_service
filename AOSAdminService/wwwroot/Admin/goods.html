@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Справочник товаров</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="JS/goods.js"></script>
+</head>
+    <body>
+	<table border="1" width="100%" height="100%">
+  	    <tr>
+    		<td>
+				<font size="6"><b>"Аптека от склада"</b></font>				
+			</td>
+			<td colspan="2">
+				<p align="right"><a>Выход</a></p>
+			</td>
+  	    </tr>
+	    <tr>
+    		<td colspan="2">
+				<p>Справочная информация</p>
+			</td>
+  	    </tr>
+	    <tr>
+    		<td width="25%" valign="top">
+				<p><a href="goods.html">Справочник товаров</a></p>
+				<p><a href="stickers.html">Стикеры</a></p>
+				<p><a href="goodsnoimage.html">Товары без фото</a></p>
+				<p><a href="goodsnodesc.html">Товары без описаний</a></p>
+				<p><a href="prices.html">Управление ценами</a></p>
+				<p><a href="coupons.html">Купоны</a></p>
+			</td>
+	        <td valign="top">
+				<font size="6"><b>Справочник товаров</b></font>
+				<hr>
+				<form>
+					Код
+					<input type="text" id="good_id">
+					<input type="button" id="searchB" value="Поиск">
+				</form>
+				<br>
+				<br>
+				<table>
+					<tr>
+						<td>
+							Код	
+						</td>
+						<td>
+							<input type="text" id="idTB" readonly>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Наименование
+						</td>
+						<td>
+							<input type="text" id="nameTB" readonly>
+						</td>
+					</tr>
+					<tr>
+						<td>	
+							Наличие описания из БД VIDAL
+						</td>
+						<td>
+							<input type="text" id="vidalTB" readonly>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Вхождение в маркетинговые группы	
+						</td>
+						<td>
+							<input type="text" id="markGroupTB" readonly>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Описание<br>					
+						</td>
+						<td>
+							<textarea rows="8" id="descriptionTB"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Изображения<br>
+							Добавить изображения<br><br>	 
+						</td>
+						<td>
+							<input type="file" id="imageEl" name="imageEl" multiple accept="image/*" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" id="saveB" value="Сохранить">
+						</td>
+					</tr>
+				</table>
+			</td>
+  	    </tr>
+	</table>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+       <title>Управление ценами</title>
+	   <meta charset="utf-8">
+	   <script type="text/javascript" src="JS/prices.js"></script>
+    </head>
+    <body>
+	<table border="1" width="100%" height="100%">
+  	    <tr>
+    		<td>
+				<font size="6"><b>"Аптека от склада"</b></font>				
+			</td>
+			<td colspan="2">
+				<p align="right"><a>Выход</a></p>
+			</td>
+  	    </tr>
+	    <tr>
+    		<td colspan="2">
+				<p>Справочная информация</p>
+			</td>
+  	    </tr>
+		<tr>
+			<td width="25%" valign="top">
+				<p><a href="goods.html">Справочник товаров</a></p>
+				<p><a href="stickers.html">Стикеры</a></p>
+				<p><a href="goodsnoimage.html">Товары без фото</a></p>
+				<p><a href="goodsnodesc.html">Товары без описаний</a></p>
+				<p><a href="prices.html">Управление ценами</a></p>
+				<p><a href="coupons.html">Купоны</a></p>
+			</td>
+			<td valign="top">
+				<font size="6"><b>Управление ценами</b></font>
+				<hr>
+				<form>
+					<p>
+						<input type="button" id="loadB" value="Загрузить">
+						<input type="button" id="addPriceB" value="Добавить">
+						<input type="button" id="delPriceB" value="Удалить">
+						<input type="button" id="unloadB" value="Выгрузить в Excel">
+					</p>
+					<p>
+						<input type="text" id="code" title="Код товара">
+						<input type="text" id="nameG" title="Наименование">
+					</p>
+					<p>
+						<input type="button" id="filterB" value="Фильтр">
+						<input type="button" id="resetB" value="Сброс">
+					</p>
+				</form>
+				<br>
+				<table border="1" id="priceTable">
+					<tr>
+						<th align="center">ИД</th>
+						<th align="center">Код товара</th>
+						<th align="center">Наименование</th>
+						<th align="center">Фиксированная цена</th>
+						<th align="center">Старая цена (минимальная)</th>
+						<th align="center"></th>
+					</tr>
+				</table>
+			</td>
+			<dialog value="Добавление" id="addEditDialog">
+				<form method="dialog" id="addEditForm">
+					<textarea rows="8" id="dataTB"></textarea>
+					<input type="button" id="saveB" value="Сохранить">
+					<input type="hidden" id="typeTB" value="add">
+				</form>
+			</dialog>
+		</tr>
+	</table>
+    </body>
+</html>

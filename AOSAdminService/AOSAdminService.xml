@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AOSAdminService</name>
+    </assembly>
+    <members>
+        <member name="M:AOSAdminService.Models.AccountController.Login(System.String,System.String)">
+            <summary>
+            Подтверждение авторизации пользователя
+            </summary>
+            <param name="login"></param>
+            <param name="password"></param>
+            <response code="200">Код доступа успешно создан</response>
+            <response code="400">Неправильный ввод данных</response> 
+        </member>
+        <member name="M:AOSAdminService.Models.AccountController.RefreshToken">
+            <summary>
+            Обновить токен
+            </summary>
+            <response code="200">API токен</response>
+            <response code="401">Неверный RefreshToken</response> 
+        </member>
+        <member name="M:AOSAdminService.Models.AccountController.Logout">
+            <summary>
+            Разлогиниться 
+            </summary>
+            <response code="200">Успешный ответ</response>
+            <response code="400">Неверный RefreshToken</response>
+            <response code="401">Пользователь не аутентифицирован</response>
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.GetGood(System.Int32)">
+            <summary>
+            Получение товара по ID
+            </summary>
+            <param name="id"></param>
+            <response code="200">Товар получен</response>
+            <response code="400">Товара не существует</response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.EditGood(System.Int32,System.String,System.String)">
+            <summary>
+            Редактирование товара
+            </summary>
+            <param name="id"></param>
+            <response code="200">Товар получен</response>
+            <response code="400">Товара не существует</response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.GetStickers">
+            <summary>
+            Получение списка стикеров
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.AddSticker(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Добавление стикера
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.EditSticker(System.Int32,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Редактирование стикера
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.DeleteSticker(System.Int32)">
+            <summary>
+            Удаление стикера
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.GetPromoCode">
+            <summary>
+            Получение списка промо-кодов
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.AddPromoCode(System.String,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Int32,System.Decimal,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            Добавление промо-кода
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.EditPromoCode(System.String,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Int32,System.Decimal,System.Boolean,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Редактирование промо-кода
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.DeletePromoCode(System.Int32)">
+            <summary>
+            Удаление промо-кода
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.GetGoodsNoImage">
+            <summary>
+            Получение товаров без фото
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.GetGoodsNoDesc">
+            <summary>
+            Получение товаров без описания
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.GetPrices">
+            <summary>
+            Получение цен
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.DeletePrice(System.Int32)">
+            <summary>
+            Удаление цены
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.AddGoodsSticker(System.String,System.Int32)">
+            <summary>
+            Добавить стикер товарам
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.ReplaceGoodsSticker(System.String,System.Int32)">
+            <summary>
+            Заменить стикер товарам
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.DeleteGoodsSticker(System.String)">
+            <summary>
+            Удалить связи со стикерами у товаров
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.GetPricesFilter(System.Int32,System.String)">
+            <summary>
+            Фильтрация списка цен по имени или коду товара
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.AdminController.GetPromoCodeFilter(System.Int32,System.String,System.Int32)">
+            <summary>
+            Фильтрация списка купонов по ид, коду и номеру группы товаров
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+        <member name="M:AOSAdminService.Controllers.MarketingController.GetStickers">
+            <summary>
+            Получение списка акций
+            </summary>
+            <response code="200"></response>
+            <response code="400"></response> 
+        </member>
+    </members>
+</doc>

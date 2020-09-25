@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+       <title>Стикеры</title>
+	   <meta charset="utf-8">
+	   <script type="text/javascript" src="JS/stickers.js"></script>
+    </head>
+    <body>
+	<table border="1" width="100%" height="100%">
+  	    <tr>
+    		<td>
+				<font size="6"><b>"Аптека от склада"</b></font>				
+			</td>
+			<td colspan="2">
+				<p align="right"><a>Выход</a></p>
+			</td>
+  	    </tr>
+	    <tr>
+    		<td colspan="2">
+				<p>Справочная информация</p>
+			</td>
+  	    </tr>
+		<tr>
+			<td width="25%" valign="top">
+				<p><a href="goods.html">Справочник товаров</a></p>
+				<p><a href="stickers.html">Стикеры</a></p>
+				<p><a href="goodsnoimage.html">Товары без фото</a></p>
+				<p><a href="goodsnodesc.html">Товары без описаний</a></p>
+				<p><a href="prices.html">Управление ценами</a></p>
+				<p><a href="coupons.html">Купоны</a></p>
+			</td>
+			<td valign="top">
+				<font size="6"><b>Стикеры</b></font>
+				<hr>
+				<form>
+					<input type="button" id="addStickerB" value="Добавить стикеры">
+					<input type="button" id="deleteLinkB" value="Удалить связи по товарам">
+				</form>
+				<br>
+				<table border="1" id="stickerTable">
+					<tr>
+						<th align="center">Идентификатор</th>
+						<th align="center">Наименование</th>
+						<th align="center">Цвет фона</th>
+						<th align="center">Цвет шрифта</th>
+						<th align="center" colspan="3"></th>
+					</tr>
+				</table>
+			</td>
+			<dialog value="Добавление" id="addEditDialog">
+				<form method="dialog" id="addEditForm">
+					ИД
+					<input type="text" id="idTB"><br>
+					Наименование
+					<input type="text" id="nameTB"><br>
+					Цвет фона
+					<input type="color" id="bgColorTB"><br>
+					Цвет шрифта
+					<input type="color" id="fontColorTB"><br>
+					<input type="button" id="saveB" value="Добавить">
+					<input type="hidden" id="typeTB" value="add">
+				</form>
+			</dialog>
+			<dialog value="Добавление стикера товарам" id="addLinkDialog">
+				<form method="dialog" id="addLinkForm">
+					Идентификатор стикера
+					<input type="text" id="idTB" readonly><br>
+					Наименование стикера
+					<input type="text" id="nameTB" readonly><br>
+					Цвет фона
+					<input type="color" id="bgColorTB"><br>
+					Цвет шрифта
+					<input type="color" id="fontColorTB"><br>
+					Действие
+					<p><input type="radio" id="addRB" name="action" checked>добавить</p>
+					<p><input type="radio" id="replaceRB" name="action">заменить</p>
+					Коды товаров
+					<textarea rows="9" id="goodsCodesTB"></textarea><br>
+					<input type="button" id="saveLinkB" value="Сохранить">
+				</form>
+			</dialog>
+			<dialog value="Удаление связей" id="delLinkDialog">
+				<form method="dialog" id="delLinkForm">
+					Действие
+					<p><input type="radio" id="delRB" name="action" checked>удалить</p>
+					Коды товаров
+					<textarea rows="10" id="goodsCodesTB"></textarea><br>
+					<input type="button" id="delLinkB" value="Удалить">
+				</form>
+			</dialog>
+		</tr>
+	</table>
+    </body>
+</html>

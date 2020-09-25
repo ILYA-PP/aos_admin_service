@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Обратная связь</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="JS/feedback.js"></script>
+</head>
+    <body>
+	<table border="1" width="100%" height="100%" cellpadding="4" cellspacing="5">
+  	    <tr>
+    		<td colspan="2">
+				<font size="5"><b>Автоматизированное рабочее место маркетолога "Аптека от склада"</b></font>				
+			</td>
+			<td colspan="2" width="5%" align="right">
+				<a href="">Выход</a>				
+			</td>
+  	    </tr>
+	    <tr>
+			<td width="25%" valign="top">
+				<p><a href="discountcontrol.html">Управление акциями</a></p>
+				<p><a href="offers.html">Персональные предложения</a></p>
+				<p><a href="goodrelated.html">Сопутствующие товары</a></p>
+				<p><a href="feedback.html">Обратная связь</a></p>
+				<p><a href="sendpush.html">Отправить PUSH-уведомление</a></p>
+			</td>
+	        <td valign="top" colspan="2">
+				<font size="6"><b>Обратная связь</b></font>
+				<hr>
+				<form>
+					<p><input type="date" name="datetime" title="Дата и время">
+					<input type="text" name="client" title="Клиент">
+					<select name="rating">
+						<option  selected="selected" value="all">Все</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					<input type="text" name="city" title="Город">
+					<input type="text" name="pharmacy" title="Аптека">
+					<input type="text" name="phone" title="Номер телефона">
+					<select name="recall">
+						<option  selected="selected" value="all">Все</option>
+						<option value="yse">Да</option>
+						<option value="no">нет</option>
+					</select>
+					<select name="view">
+						<option  selected="all" value="all">Все</option>
+						<option value="yes">Да</option>
+						<option value="no">Нет</option>
+					</select></p>
+					<p><button>Применить фильтр</button>
+					   <button>Очистить</button></p>
+				</form>
+				<br>
+				<table border="1">
+					<tr>
+						<th align="center">Дата и время</th>
+						<th align="center">Клиент</th>
+						<th align="center">Комментарий</th>
+						<th align="center">Оценка</th>
+						<th align="center">Город</th>
+						<th align="center">Аптека</th>
+						<th align="center">Номер телефона</th>
+						<th align="center">П</th>
+						<th align="center">С</th>
+					</tr>
+					<tr>
+						<td align="center">15.09.2020 13:42</td>
+						<td align="center">ПКлиент 1</td>
+						<td align="center">Комментарий</td>
+						<td align="center">5</td>
+						<td align="center">Пермь</td>
+						<td align="center">ул. Ленина</td>
+						<td align="center">88005553535</td>
+						<td align="center">call</td>
+						<td align="center">view</td>
+					</tr>
+				</table>
+			</td>
+  	    </tr>
+	</table>
+    </body>
+</html>
